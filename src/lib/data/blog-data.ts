@@ -5,11 +5,50 @@ import author2 from '@/assets/images/landing/blog/authors-2.png'
 import author3 from '@/assets/images/landing/blog/authors-3.png'
 import author4 from '@/assets/images/landing/blog/authors-4.png'
 import author5 from '@/assets/images/landing/blog/authors-5.png'
+import aiDevelopmentImage from '@/assets/images/landing/blog/ai-development.png'
+import apiSecurityImage from '@/assets/images/landing/blog/api-security.png'
+import blockchainImage from '@/assets/images/landing/blog/blockchain-technology-explained.png'
+import ciCdPipelineImage from '@/assets/images/landing/blog/ci-cd-pipeline.png'
+import cloudComputingImage from '@/assets/images/landing/blog/cloud-computing-fundamentals.png'
+import colorTheoryImage from '@/assets/images/landing/blog/color-theory-for-digital-designers.png'
+import digitalMarketingImage from '@/assets/images/landing/blog/digital-marketing-strategy.png'
+import gdprComplianceImage from '@/assets/images/landing/blog/gdpr-compliance.png'
+import microservicesImage from '@/assets/images/landing/blog/microservices.png'
+import nextjs14Image from '@/assets/images/landing/blog/nextjs-14.png'
+import nodeBackendImage from '@/assets/images/landing/blog/nodejs-backend-development.png'
+import pythonDjangoImage from '@/assets/images/landing/blog/python-web-development-django.png'
+import reactArchitectureImage from '@/assets/images/landing/blog/react-architecture.png'
+import responsiveDesignImage from '@/assets/images/landing/blog/responsive-design-principles.png'
+import startupFundingImage from '@/assets/images/landing/blog/startup-funding-guide.png'
+import typescriptImage from '@/assets/images/landing/blog/typescript.png'
+import uiDesignTrendsImage from '@/assets/images/landing/blog/ui-design-trends.png'
+import webAppSecurityImage from '@/assets/images/landing/blog/web-application-security.png'
 
 // Helper to get image URL from Next.js image import
 const getImageUrl = (img: any): string => {
   if (typeof img === 'string') return img
   return img?.src || img?.default?.src || String(img)
+}
+
+const blogImages = {
+  nextjs14: getImageUrl(nextjs14Image),
+  uiDesignTrends: getImageUrl(uiDesignTrendsImage),
+  typescript: getImageUrl(typescriptImage),
+  responsiveDesign: getImageUrl(responsiveDesignImage),
+  reactArchitecture: getImageUrl(reactArchitectureImage),
+  aiDevelopment: getImageUrl(aiDevelopmentImage),
+  microservices: getImageUrl(microservicesImage),
+  cloudComputing: getImageUrl(cloudComputingImage),
+  blockchain: getImageUrl(blockchainImage),
+  colorTheory: getImageUrl(colorTheoryImage),
+  nodeBackend: getImageUrl(nodeBackendImage),
+  pythonDjango: getImageUrl(pythonDjangoImage),
+  digitalMarketing: getImageUrl(digitalMarketingImage),
+  startupFunding: getImageUrl(startupFundingImage),
+  webAppSecurity: getImageUrl(webAppSecurityImage),
+  apiSecurity: getImageUrl(apiSecurityImage),
+  gdprCompliance: getImageUrl(gdprComplianceImage),
+  ciCdPipeline: getImageUrl(ciCdPipelineImage),
 }
 
 // Authors
@@ -172,7 +211,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="best-practices">Best Practices</h2>
       <p>When working with Server Components, it's important to understand when to use them versus Client Components. Use Server Components for data fetching, static content, and components that don't require interactivity.</p>
     `,
-    featuredImage: '/blog/nextjs-14.png',
+    featuredImage: blogImages.nextjs14,
     category: categories[2],
     tags: ['Next.js', 'React', 'Server Components', 'Performance'],
     author: authors[0],
@@ -185,7 +224,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'Next.js 14 Server Components Complete Guide | Arcbizz Blog',
       metaDescription: 'Learn how to use Server Components in Next.js 14 to build faster, more efficient React applications.',
-      ogImage: '/blog/nextjs-14.png',
+      ogImage: blogImages.nextjs14,
       keywords: ['Next.js', 'Server Components', 'React', 'Web Development'],
     },
   },
@@ -207,7 +246,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="dark-mode">Dark Mode Everywhere</h2>
       <p>Dark mode is no longer optional. Users expect it, and designers are creating beautiful dark themes that reduce eye strain.</p>
     `,
-    featuredImage: '/blog/ui-design-trends.png',
+    featuredImage: blogImages.uiDesignTrends,
     category: categories[1],
     tags: ['UI Design', 'UX', 'Design Trends', 'Typography'],
     author: authors[1],
@@ -219,7 +258,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'Modern UI Design Trends 2025 | Arcbizz Blog',
       metaDescription: 'Discover the latest UI design trends for 2025 and learn how to implement them in your projects.',
-      ogImage: '/blog/ui-design-trends.png',
+      ogImage: blogImages.uiDesignTrends,
       keywords: ['UI Design', 'Design Trends', 'UX', '2025'],
     },
   },
@@ -241,7 +280,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="utility-types">Utility Types</h2>
       <p>Leverage TypeScript's built-in utility types like <code>Partial</code>, <code>Pick</code>, and <code>Omit</code> to create flexible type definitions.</p>
     `,
-    featuredImage: '/blog/typescript.png',
+    featuredImage: blogImages.typescript,
     category: categories[2],
     tags: ['TypeScript', 'Programming', 'Best Practices', 'Development'],
     author: authors[2],
@@ -253,7 +292,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'TypeScript Best Practices | Arcbizz Blog',
       metaDescription: 'Learn TypeScript best practices to write cleaner, more maintainable code.',
-      ogImage: '/blog/typescript.png',
+      ogImage: blogImages.typescript,
       keywords: ['TypeScript', 'JavaScript', 'Programming', 'Best Practices'],
     },
   },
@@ -278,7 +317,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="best-practices">Best Practices</h2>
       <p>Key practices include flexible grids, responsive images, touch-friendly interfaces, and performance optimization for mobile devices.</p>
     `,
-    featuredImage: '/blog/responsive-design-principles.png',
+    featuredImage: blogImages.responsiveDesign,
     category: categories[1],
     tags: ['Responsive Design', 'Mobile-First', 'UI/UX', 'Web Design'],
     author: authors[4],
@@ -290,7 +329,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'Responsive Design Principles | Arcbizz Blog',
       metaDescription: 'Learn responsive design principles and master the mobile-first approach for modern web design.',
-      ogImage: '/blog/responsive-design-principles.png',
+      ogImage: blogImages.responsiveDesign,
       keywords: ['Responsive Design', 'Mobile-First', 'UI/UX', 'Web Design'],
     },
   },
@@ -312,7 +351,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="code-splitting">Code Splitting</h2>
       <p>Implement code splitting to reduce initial bundle size and improve load times. Use React.lazy and Suspense for route-based splitting.</p>
     `,
-    featuredImage: '/blog/react-architecture.png',
+    featuredImage: blogImages.reactArchitecture,
     category: categories[2],
     tags: ['React', 'Architecture', 'Scalability', 'Performance'],
     author: authors[3],
@@ -324,7 +363,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'Building Scalable React Applications | Arcbizz Blog',
       metaDescription: 'Learn architecture patterns for building large-scale, maintainable React applications.',
-      ogImage: '/blog/react-architecture.png',
+      ogImage: blogImages.reactArchitecture,
       keywords: ['React', 'Architecture', 'Scalability', 'JavaScript'],
     },
   },
@@ -346,7 +385,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="code-review">AI Code Review</h2>
       <p>Automated code review systems can catch bugs, suggest improvements, and ensure code quality before human review.</p>
     `,
-    featuredImage: '/blog/ai-development.png',
+    featuredImage: blogImages.aiDevelopment,
     category: categories[0],
     tags: ['AI', 'Development Tools', 'Automation', 'Future'],
     author: authors[2],
@@ -358,7 +397,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'AI-Powered Development Tools | Arcbizz Blog',
       metaDescription: 'Discover how AI is transforming software development with intelligent coding tools.',
-      ogImage: '/blog/ai-development.png',
+      ogImage: blogImages.aiDevelopment,
       keywords: ['AI', 'Development Tools', 'Coding', 'Automation'],
     },
   },
@@ -380,7 +419,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="challenges">Challenges</h2>
       <p>While powerful, microservices come with challenges like distributed data management and inter-service communication complexity.</p>
     `,
-    featuredImage: '/blog/microservices.png',
+    featuredImage: blogImages.microservices,
     category: categories[0],
     tags: ['Microservices', 'Architecture', 'Distributed Systems', 'Backend'],
     author: authors[2],
@@ -392,7 +431,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'Microservices Architecture Guide | Arcbizz Blog',
       metaDescription: 'Complete guide to designing and implementing microservices architecture.',
-      ogImage: '/blog/microservices.png',
+      ogImage: blogImages.microservices,
       keywords: ['Microservices', 'Architecture', 'Backend', 'Distributed Systems'],
     },
   },
@@ -417,7 +456,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="benefits">Benefits of Cloud Computing</h2>
       <p>Cloud computing offers cost efficiency, scalability, flexibility, and automatic updates. It eliminates the need for physical infrastructure maintenance.</p>
     `,
-    featuredImage: '/blog/cloud-computing-fundamentals.png',
+    featuredImage: blogImages.cloudComputing,
     category: categories[0],
     tags: ['Cloud Computing', 'AWS', 'DevOps', 'Infrastructure'],
     author: authors[4],
@@ -429,7 +468,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'Cloud Computing Fundamentals Guide | Arcbizz Blog',
       metaDescription: 'Learn cloud computing fundamentals and how to deploy scalable applications in the cloud.',
-      ogImage: '/blog/cloud-computing-fundamentals.png',
+      ogImage: blogImages.cloudComputing,
       keywords: ['Cloud Computing', 'AWS', 'DevOps', 'Infrastructure'],
     },
   },
@@ -454,7 +493,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="future">Future of Blockchain</h2>
       <p>As blockchain technology matures, we can expect wider adoption, improved scalability, and integration with IoT and AI systems.</p>
     `,
-    featuredImage: '/blog/blockchain-technology-explained.png',
+    featuredImage: blogImages.blockchain,
     category: categories[0],
     tags: ['Blockchain', 'Cryptocurrency', 'Technology', 'Innovation'],
     author: authors[0],
@@ -466,7 +505,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'Blockchain Technology Explained | Arcbizz Blog',
       metaDescription: 'Learn about blockchain technology and its applications beyond cryptocurrency.',
-      ogImage: '/blog/blockchain-technology-explained.png',
+      ogImage: blogImages.blockchain,
       keywords: ['Blockchain', 'Cryptocurrency', 'Technology', 'Decentralization'],
     },
   },
@@ -491,7 +530,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="accessibility">Color and Accessibility</h2>
       <p>Designers must consider color contrast ratios and ensure their designs are accessible to users with color vision deficiencies. Always test for WCAG compliance.</p>
     `,
-    featuredImage: '/blog/color-theory-for-digital-designers.png',
+    featuredImage: blogImages.colorTheory,
     category: categories[1],
     tags: ['Color Theory', 'Design', 'UI/UX', 'Visual Design'],
     author: authors[2],
@@ -503,7 +542,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'Color Theory for Digital Designers | Arcbizz Blog',
       metaDescription: 'Master color theory principles and create harmonious color palettes for digital interfaces.',
-      ogImage: '/blog/color-theory-for-digital-designers.png',
+      ogImage: blogImages.colorTheory,
       keywords: ['Color Theory', 'Design', 'UI/UX', 'Visual Design'],
     },
   },
@@ -531,7 +570,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="error-handling">Error Handling</h2>
       <p>Implement comprehensive error handling middleware to catch and format errors consistently. This improves debugging and provides better API responses.</p>
     `,
-    featuredImage: '/blog/nodejs-backend-development.png',
+    featuredImage: blogImages.nodeBackend,
     category: categories[2],
     tags: ['Node.js', 'Backend', 'RESTful APIs', 'Express'],
     author: authors[2],
@@ -543,7 +582,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'Node.js Backend Development Guide | Arcbizz Blog',
       metaDescription: 'Learn how to build robust RESTful APIs using Node.js and Express with authentication and database integration.',
-      ogImage: '/blog/nodejs-backend-development.png',
+      ogImage: blogImages.nodeBackend,
       keywords: ['Node.js', 'Backend', 'RESTful APIs', 'Express'],
     },
   },
@@ -571,7 +610,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="admin-interface">Django Admin Interface</h2>
       <p>Django provides a built-in admin interface that automatically generates a user-friendly interface for managing your application's data, perfect for content management.</p>
     `,
-    featuredImage: '/blog/python-web-development-django.png',
+    featuredImage: blogImages.pythonDjango,
     category: categories[2],
     tags: ['Python', 'Django', 'Web Development', 'Backend'],
     author: authors[3],
@@ -583,7 +622,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'Python Web Development with Django | Arcbizz Blog',
       metaDescription: 'Learn Django framework and build full-featured web applications with Python.',
-      ogImage: '/blog/python-web-development-django.png',
+      ogImage: blogImages.pythonDjango,
       keywords: ['Python', 'Django', 'Web Development', 'Backend'],
     },
   },
@@ -611,7 +650,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="analytics">Analytics and Measurement</h2>
       <p>Track your marketing performance using analytics tools. Measure key metrics like traffic, conversions, engagement rates, and ROI to continuously improve your strategy.</p>
     `,
-    featuredImage: '/blog/digital-marketing-strategy.png',
+    featuredImage: blogImages.digitalMarketing,
     category: categories[3],
     tags: ['Digital Marketing', 'SEO', 'Business Strategy', 'Growth'],
     author: authors[4],
@@ -623,7 +662,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'Digital Marketing Strategy Guide | Arcbizz Blog',
       metaDescription: 'Learn how to create effective digital marketing strategies that drive business growth and increase revenue.',
-      ogImage: '/blog/digital-marketing-strategy.png',
+      ogImage: blogImages.digitalMarketing,
       keywords: ['Digital Marketing', 'SEO', 'Business Strategy', 'Marketing'],
     },
   },
@@ -651,7 +690,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="preparation">Preparing for Funding</h2>
       <p>To attract investors, you need a solid business plan, clear value proposition, market research, financial projections, and a strong team. Preparation is key to success.</p>
     `,
-    featuredImage: '/blog/startup-funding-guide.png',
+    featuredImage: blogImages.startupFunding,
     category: categories[3],
     tags: ['Startup', 'Funding', 'Business', 'Entrepreneurship'],
     author: authors[3],
@@ -663,7 +702,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'Startup Funding Guide | Arcbizz Blog',
       metaDescription: 'Navigate the startup funding landscape and learn about different funding options from bootstrap to Series A.',
-      ogImage: '/blog/startup-funding-guide.png',
+      ogImage: blogImages.startupFunding,
       keywords: ['Startup', 'Funding', 'Business', 'Entrepreneurship'],
     },
   },
@@ -691,7 +730,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="regular-updates">Regular Updates and Monitoring</h2>
       <p>Keep all dependencies and frameworks up to date. Implement security monitoring, logging, and intrusion detection systems. Conduct regular security audits and penetration testing.</p>
     `,
-    featuredImage: '/blog/web-application-security.png',
+    featuredImage: blogImages.webAppSecurity,
     category: categories[4],
     tags: ['Security', 'Web Security', 'OWASP', 'Cybersecurity'],
     author: authors[0],
@@ -703,7 +742,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'Web Application Security Best Practices | Arcbizz Blog',
       metaDescription: 'Learn essential web application security best practices to protect your applications from common vulnerabilities and attacks.',
-      ogImage: '/blog/web-application-security.png',
+      ogImage: blogImages.webAppSecurity,
       keywords: ['Web Security', 'Cybersecurity', 'OWASP', 'Application Security'],
     },
   },
@@ -731,7 +770,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="api-monitoring">API Monitoring and Logging</h2>
       <p>Monitor API usage patterns, log all access attempts, and set up alerts for suspicious activities. Track authentication failures and implement account lockout mechanisms.</p>
     `,
-    featuredImage: '/blog/api-security.png',
+    featuredImage: blogImages.apiSecurity,
     category: categories[4],
     tags: ['API Security', 'JWT', 'OAuth', 'Authentication'],
     author: authors[2],
@@ -743,7 +782,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'API Security: Authentication and Authorization | Arcbizz Blog',
       metaDescription: 'Learn how to secure your APIs with proper authentication and authorization using JWT, OAuth 2.0, and best practices.',
-      ogImage: '/blog/api-security.png',
+      ogImage: blogImages.apiSecurity,
       keywords: ['API Security', 'JWT', 'OAuth 2.0', 'Authentication'],
     },
   },
@@ -774,7 +813,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="privacy-by-design">Privacy by Design</h2>
       <p>Build privacy considerations into your application from the start. Use privacy-preserving technologies, minimize data collection, and implement data protection measures by default.</p>
     `,
-    featuredImage: '/blog/gdpr-compliance.png',
+    featuredImage: blogImages.gdprCompliance,
     category: categories[4],
     tags: ['GDPR', 'Data Privacy', 'Compliance', 'Security'],
     author: authors[4],
@@ -786,7 +825,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'GDPR Compliance Guide for Developers | Arcbizz Blog',
       metaDescription: 'Learn how to implement GDPR compliance and data privacy measures in your applications.',
-      ogImage: '/blog/gdpr-compliance.png',
+      ogImage: blogImages.gdprCompliance,
       keywords: ['GDPR', 'Data Privacy', 'Compliance', 'Security'],
     },
   },
@@ -814,7 +853,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
       <h2 id="monitoring">Monitoring and Feedback</h2>
       <p>Set up notifications for pipeline failures, monitor build times, and track deployment metrics. Use dashboards to visualize pipeline health and identify bottlenecks.</p>
     `,
-    featuredImage: '/blog/ci-cd-pipeline.png',
+    featuredImage: blogImages.ciCdPipeline,
     category: categories[5],
     tags: ['CI/CD', 'DevOps', 'Automation', 'Deployment'],
     author: authors[1],
@@ -826,7 +865,7 @@ const rawPosts: Omit<BlogPost, 'readingTime' | 'tableOfContents'>[] = [
     seo: {
       metaTitle: 'CI/CD Pipeline Setup Guide | Arcbizz Blog',
       metaDescription: 'Learn how to build efficient CI/CD pipelines for automated testing, building, and deployment in modern development workflows.',
-      ogImage: '/blog/ci-cd-pipeline.png',
+      ogImage: blogImages.ciCdPipeline,
       keywords: ['CI/CD', 'DevOps', 'Automation', 'Continuous Integration'],
     },
   },
